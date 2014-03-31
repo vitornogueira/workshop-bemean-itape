@@ -1,0 +1,8 @@
+h2 Cervejaria Be MEAN
+
+ul
+  li(data-ng-repeat='beer in beers')
+    {{ beer.name }}
+    a(href='/beers/{{ beer._id }}')  Edit
+     -
+    a(data-ng-click='delete(beer)')  Delete

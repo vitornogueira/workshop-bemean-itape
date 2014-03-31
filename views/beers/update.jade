@@ -1,0 +1,40 @@
+h2 Cervejaria Be MEAN
+
+h3 {{ msg }}
+form( method='POST' )
+  div.form-group
+    label Name:
+      input.form-control(
+        type='text',
+        name='name',
+        required,
+        value='{{ beer.name }}'
+        data-ng-model="beer.name"
+        )
+  div.form-group
+    label Category:
+      input.form-control(
+        type='text',
+        name='category',
+        required,
+        value='{{ beer.category }}'
+        data-ng-model="beer.category"
+        )
+  div.form-group
+    label Alcohol:
+      input.form-control(
+        type='text',
+        name='alcohol',
+        required,
+        value='{{ beer.alcohol }}'
+        data-ng-model="beer.alcohol"
+        )
+  div.form-group
+    label Description:
+      textarea.form-control(
+        name='description',
+        required,
+        value='{{ beer.description }}',
+        data-ng-model="beer.description"
+      )
+  button.btn.btn-primary.btn-lg(data-ng-click='update(beer)') Cadastrar

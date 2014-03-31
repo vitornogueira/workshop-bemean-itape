@@ -1,0 +1,17 @@
+h2 Cervejaria Be MEAN
+
+h3 {{ msg }}
+form( method='POST' )
+  div.form-group
+    label Name:
+      input.form-control(type='text', name='name', required, data-ng-model="form.name")
+  div.form-group
+    label Category:
+      input.form-control(type='text', name='category', required, data-ng-model="form.category")
+  div.form-group
+    label Alcohol:
+      input.form-control(type='text', name='alcohol', required, data-ng-model="form.alcohol")
+  div.form-group
+    label Description:
+      textarea.form-control(name='description', required, data-ng-model="form.description")
+  button.btn.btn-primary.btn-lg(data-ng-click='create(form)') Cadastrar
